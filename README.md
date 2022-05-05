@@ -7,17 +7,17 @@ The Banking System project is a java application that allows users to register a
 
 ## Technologies Used
 
-My sql - version 8.0.28.0
-jdbc - version 8 
-eclipse - version 2022-23
+MSQL- version 8.0.28.0
+JDBC connector - version 8 
+Eclipse - version 2022-23
 
 ## Features
-account created using case1 in app.java
+Account created using case1 in app.java
 By using set and get methods data would be accesed.
-try and catch block is used for exception handling.
-interfaces jdbcaccountrepository used for full abstraction of data.
- By using preparedstatment the object is created in program to access sql records with high efficiency
- Balance enquiry
+Try and catch block is used for exception handling.
+Interfaces jdbcaccountrepository used for full abstraction of data.
+By using preparedstatment the object is created in program to access sql records with high efficiency
+Balance enquiry
  
 To-do list
 #UPI payments
@@ -26,24 +26,41 @@ To-do list
 
 ## Getting Started
    
-(include git clone command)
-(include all environment setup steps)
+git clone git@https://github.com/veronikakowsar/Bankingproject.git
+Eclipse or webdevelopers 
+MYSQL 8.0.28.0/MYSQL workbench
+Create project database in mysql 
+Create table  trans with tyhe property given below
++-------------+-------------+------+-----+---------+-------+
+| Field       | Type        | Null | Key | Default | Extra |
++-------------+-------------+------+-----+---------+-------+
+| fromid      | varchar(20) | YES  |     | NULL    |       |
+| toid        | varchar(20) | YES  |     | NULL    |       |
+| transamount | double      | YES  |     | NULL    |       |
+| date        | date        | YES  |     | NULL    |       |
++-------------+-------------+------+-----+---------+-------+
+  Create table accountdetials (Account details) 
++-----------+-------------+------+-----+---------+----------------+
+| Field     | Type        | Null | Key | Default | Extra          |
++-----------+-------------+------+-----+---------+----------------+
+| id        | int         | NO   | PRI | NULL    | auto_increment |
+| user_name | varchar(20) | YES  |     | NULL    |                |
+| phone_no  | varchar(20) | YES  |     | NULL    |                |
+| address   | varchar(50) | YES  |     | NULL    |                |
+| balance   | double      | YES  |     | NULL    |                |
+| aadhar_no | int         | YES  |     | NULL    |                |
++-----------+-------------+------+-----+---------+----------------+
 
-> Be sure to include BOTH Windows and Unix command  
-> Be sure to mention if the commands only work on a specific platform (eg. AWS, GCP)
+In Eclipse after importing the project rectify any errors with java compatibility version by taking suggestedd actions by Ecplise IED
 
-- All the `code` required to get started
-- Images of what it should look like
-
+To run the programme run App.java
 ## Usage
 
-> Here, you instruct other people on how to use your project after they’ve installed it. This would also be a good place to include screenshots of your project in action.
+we can able to add the values in both the entities,count the number of transactions,deleting the account and transferring the amount from one account to another account by giving specific details of the users.
 
-## Contributors
 
-> Here list the people who have contributed to this project. (ignore this section, if its a solo project)
 
-## License
 
-This project uses the following license: [<license_name>](<link>).
+
+
 
